@@ -1,3 +1,3 @@
 #!/bin/bash
 
-tr " " "\n" < RUG_wiki_page.txt | grep '^de$' | wc -l
+ cat RUG_wiki_page.txt | tr "[:upper:]" "[:lower:]" | tr "[ ,.?!:;()\/" "\n" | grep '^de$' | wc -l 
